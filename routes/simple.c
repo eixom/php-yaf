@@ -118,7 +118,7 @@ zval * yaf_route_simple_assemble(yaf_route_t *this_ptr, zval *mvc, zval *query T
             break;
         } 
 
-        ncontroller = zend_read_property(yaf_route_simple_ce, this_ptr, ZEND_STRL(YAF_ROUTE_SIMPLE_VAR_NAME_CONTROLLER), 1  TSRMLS_CC);
+        ncontroller = zend_read_property(yaf_route_simple_ce, this_ptr, ZEND_STRL(YAF_ROUTE_SIMPLE_VAR_NAME_CONTROLLER), 1 TSRMLS_CC);
 
         smart_str_appendl(&sstr, Z_STRVAL_P(ncontroller), Z_STRLEN_P(ncontroller));
         smart_str_appendc(&sstr, '=');
@@ -132,7 +132,7 @@ zval * yaf_route_simple_assemble(yaf_route_t *this_ptr, zval *mvc, zval *query T
             break;
         }
 
-        naction = zend_read_property(yaf_route_simple_ce, this_ptr, ZEND_STRL(YAF_ROUTE_SIMPLE_VAR_NAME_ACTION), 1  TSRMLS_CC);
+        naction = zend_read_property(yaf_route_simple_ce, this_ptr, ZEND_STRL(YAF_ROUTE_SIMPLE_VAR_NAME_ACTION), 1 TSRMLS_CC);
 
         smart_str_appendl(&sstr, Z_STRVAL_P(naction), Z_STRLEN_P(naction));
         smart_str_appendc(&sstr, '=');
@@ -165,7 +165,7 @@ zval * yaf_route_simple_assemble(yaf_route_t *this_ptr, zval *mvc, zval *query T
     if (sstr.len) {
         ZVAL_STRINGL(url, sstr.c, sstr.len - 1, 1); 
     }else{
-        ZVAL_EMPTY_STRING(url);
+        ZVAL_NULL(url);
     }
     smart_str_free(&sstr);
 
