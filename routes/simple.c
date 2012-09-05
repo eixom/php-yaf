@@ -38,7 +38,7 @@ ZEND_BEGIN_ARG_INFO_EX(yaf_route_assemble_arginfo, 0, 0, 1)
 ZEND_END_ARG_INFO()
 /*}}}*/
 
-/**	{{{	int	yaf_route_simple_route(yaf_route_t *route, yaf_request_t *request TSRMLS_DC)
+/** {{{ int	yaf_route_simple_route(yaf_route_t *route, yaf_request_t *request TSRMLS_DC)
  */
 int yaf_route_simple_route(yaf_route_t *route, yaf_request_t *request TSRMLS_DC) {
 	zval *module, *controller, *action;
@@ -220,7 +220,7 @@ PHP_METHOD(yaf_route_simple, assemble) {
 }
 /* }}} */
 
-/**	{{{	yaf_route_simple_methods
+/** {{{ yaf_route_simple_methods
  */
 zend_function_entry yaf_route_simple_methods[] = {
 	PHP_ME(yaf_route_simple, __construct, yaf_route_simple_construct_arginfo, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
