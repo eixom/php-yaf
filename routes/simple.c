@@ -172,7 +172,7 @@ zval * yaf_route_simple_assemble(yaf_route_t *this_ptr, zval *mvc, zval *query T
     return url;
 }
 
-/**	{{{	proto public Yaf_Route_Simple::route(Yaf_Request $req)
+/** {{{ proto public Yaf_Route_Simple::route(Yaf_Request $req)
 */
 PHP_METHOD(yaf_route_simple, route) {
 	yaf_request_t *request;
@@ -205,7 +205,7 @@ PHP_METHOD(yaf_route_simple, __construct) {
 }
 /* }}} */
 
-/**	{{{	proto public Yaf_Route_Simple::assemble(array $mvc,	array $query = null)
+/** {{{ proto public Yaf_Route_Simple::assemble(array $mvc, array $query = null)
 */
 PHP_METHOD(yaf_route_simple, assemble) {
 	zval *mvc, *query;
