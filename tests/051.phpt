@@ -15,10 +15,10 @@ echo assert("m=yafmodule&c=yafcontroller&a=yafaction&tkey1=tval1&tkey2=tval2"
         == $router->getRoute('simple')
         ->assemble(
             array(
-                'action'    => 'yafaction',
+                'action' => 'yafaction',
                 'tkey' => 'tval',
-                'controller'    => 'yafcontroller',
-                'module'    => 'yafmodule'
+                'controller' => 'yafcontroller',
+                'module' => 'yafmodule'
                 ),
             array(
                 'tkey1' => 'tval1',
@@ -28,9 +28,9 @@ echo assert("m=yafmodule&c=yafcontroller&a=yafaction&tkey1=tval1&tkey2=tval2"
 
 echo ',', assert("c=yafcontroller&a=yafaction" == $router->getRoute('simple')
         ->assemble(array(
-                'action'    => 'yafaction',
+                'action' => 'yafaction',
                 'tkey' => 'tval',
-                'controller'    => 'yafcontroller',
+                'controller' => 'yafcontroller',
                 )
             )
         ), PHP_EOL;
@@ -39,7 +39,7 @@ echo 'assemble_exception:';
 try{
     $router->getRoute('simple')
            ->assemble(array(
-                'action'    => 'yafaction',
+                'action' => 'yafaction',
                 'tkey' => 'tval',
                 )
             );
@@ -52,7 +52,7 @@ try{
     $router->getRoute('simple')
            ->assemble(array(
                 'tkey' => 'tval',
-                'controller'    => 'yafcontroller',
+                'controller' => 'yafcontroller',
                 )
             );
     assert(0);
